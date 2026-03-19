@@ -6,7 +6,7 @@ namespace Car_uge_12
 {
     public class FuelCar : Car
     {
-        public double TankCapacity { get; private set; }
+        public double TankCapacity { get;}
         public double FuelLevel { get; private set; }
         public double KmPerLiter { get; private set; }
         public FuelCar(string brand, string model, int year, double kmPerLiter, double tankCapacity) : base(brand, model, year, kmPerLiter)
