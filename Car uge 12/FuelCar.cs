@@ -1,0 +1,45 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Car_uge_12
+{
+    public class FuelCar : Car
+    {
+        public double TankCapacity { get; private set; }
+        public double FuelLevel { get; private set; }
+        public double KmPerLiter { get; private set; }
+        public FuelCar(string brand, string model, int year, double kmPerLiter, double tankCapacity) : base(brand, model, year, kmPerLiter)
+        {
+            TankCapacity = tankCapacity;
+            FuelLevel = tankCapacity; // Starter med fuld tank
+            KmPerLiter = kmPerLiter;
+        }
+
+    public override void UpdateEnergyLevel(double km)
+        {
+            double fuelUsed = km / KmPerLiter;
+            FuelLevel -= fuelUsed;
+            if (FuelLevel < 0)
+            {
+                FuelLevel = 0; // Undgå negativt brændstof
+                Console.WriteLine("Advarsel: Brændstoffet er opbrugt!");
+            }
+        }
+
+    public void Refuel(double liters)
+        {
+            if (liters <= 0)
+            {
+                Console.WriteLine("Fejl: Mængden af brændstof skal være positiv.");
+                return;
+            }
+            FuelLevel += liters;
+            if (FuelLevel > TankCapacity)
+            {
+                FuelLevel = TankCapacity; // Undgå overfyldning
+                Console.WriteLine("Advarsel: Tankkapaciteten er overskredet! Brændstoffet er nu på maksimum.");
+            }
+        }
+    }
+}
