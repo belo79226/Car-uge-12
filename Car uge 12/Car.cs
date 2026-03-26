@@ -18,13 +18,15 @@ namespace Car_uge_12
 		public double Odometer { get; private set; }
 		public bool IsEngineOn { get; private set; }
 
-		private List<Trip> _trips = new List<Trip>();
+		public string LicensePlate { get; private set; }
+
+        private List<Trip> _trips = new List<Trip>();
 
         //private Engine _engine;
 
 
         //Konstruktør: initialiserer bilens egenskaber og starter med motoren slukket
-        public Car(string brand, string model, int year) //konstruktør 
+        public Car(string brand, string model, int year, string licensePlate) //konstruktør 
 
 		{
 
@@ -40,7 +42,8 @@ namespace Car_uge_12
 
 			//_engine = new Engine();
 
-		}
+			LicensePlate = licensePlate;
+        }
 
 
         // Abstrakt metode: underklassen definerer, hvordan energi opdateres 

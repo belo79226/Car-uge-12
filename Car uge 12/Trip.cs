@@ -33,26 +33,26 @@ namespace Car_uge_12
         }
 
         // Beregner brændstofforbrug i liter
-        public double CalculateFuelUsed()
-        {
-            return Distance / _car.KmPerLiter;
-        }
+        //public double CalculateFuelUsed()
+        //{
+        //    return Distance / _car.KmPerLiter;
+        //}
 
         // Beregner turens pris i kr.
-        public double CalculateTripPrice(double literPrice)
-        {
-            return CalculateFuelUsed() * literPrice;
-        }
+        //public double CalculateTripPrice(double literPrice)
+        //{
+        //    return CalculateFuelUsed() * literPrice;
+        //}
 
         // Returnerer turens data som formateret tekst
-        public string GetTripDetails()
-        {
-            return $"Dato: {TripDate:dd-MM-yyyy} | " +
-                   $"Distance: {Distance} km | " +
-                   $"Varighed: {CalculateDuration()} | " +
-                   $"Brændstof: {CalculateFuelUsed():F2} L | " +
-                   $"Pris (14 kr/L): {CalculateTripPrice(14):F2} kr";
-        }
+        //public string GetTripDetails()
+        //{
+        //    return $"Dato: {TripDate:dd-MM-yyyy} | " +
+        //           $"Distance: {Distance} km | " +
+        //           $"Varighed: {CalculateDuration()} | " +
+        //           $"Brændstof: {CalculateFuelUsed():F2} L | " +
+        //           $"Pris (14 kr/L): {CalculateTripPrice(14):F2} kr";
+       // }
     }
 
 }
