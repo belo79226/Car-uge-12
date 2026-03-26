@@ -13,7 +13,7 @@ namespace Car_uge_12
 
 		public int Year { get; private set; }
 
-		public double KmPerLiter { get; private set; }
+		//public double KmPerLiter { get; private set; }
 
 		public double Odometer { get; private set; }
 		public bool IsEngineOn { get; private set; }
@@ -24,7 +24,7 @@ namespace Car_uge_12
 
 
         //Konstruktør: initialiserer bilens egenskaber og starter med motoren slukket
-        public Car(string brand, string model, int year, double kmPerLiter) //konstruktør 
+        public Car(string brand, string model, int year) //konstruktør 
 
 		{
 
@@ -34,7 +34,7 @@ namespace Car_uge_12
 
 			Year = year;
 
-			KmPerLiter = kmPerLiter;
+			//KmPerLiter = kmPerLiter;
 
 			IsEngineOn = false;
 
