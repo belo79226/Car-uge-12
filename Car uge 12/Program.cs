@@ -9,10 +9,18 @@
             //string brand, string model, int year,double batteryCapacity, double kmPerKwh, string licensePlate, double price
             EletricCar ec = new EletricCar("Tesla", "Model 3", 2023, 75, 6.5, "CD67890", 380000);
 
+            House h = new House("Strandvejen 42, 2900 Hellerup", 1965, 4200000, "1234-AB");
+
+
+           
 
 
             List<ISellable> forSale = new List<ISellable> { fc, ec };
 
+
+            forSale.Add(h);
+
+           
 
 
             foreach (ISellable s in forSale)
@@ -37,6 +45,7 @@
 
             List<IInsurable> insured = new List<IInsurable> { fc, ec };
 
+            insured.Add(h);
 
 
             foreach (IInsurable i in insured)
